@@ -18,7 +18,7 @@ setup(name='wb-project',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          # -*- Extra requirements: -*-
+          'South >= 0.7.3',
       ],
       entry_points="""
       # -*- Entry points: -*-
