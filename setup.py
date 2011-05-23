@@ -19,7 +19,6 @@ setup(name='wb-project',
       zip_safe=False,
       install_requires=[
           'South >= 0.7.3',
-          'wb-inventory',
       ],
       entry_points="""
       # -*- Entry points: -*-
