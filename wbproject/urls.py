@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     ),
 
     # mount wbinventory app at inventory/
-    url(regex=  r'^inventory/',
+    url(regex=  r'^wbinventory/',
         view=   include('wbinventory.urls'),
     ),
 )
