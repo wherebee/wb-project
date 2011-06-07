@@ -2,14 +2,11 @@ from django.conf.urls.defaults import patterns, include, url
 from django.views.generic.simple import redirect_to
 
 
-urlpatterns = patterns('',
-    # redirect root URL to inventory/
+urlpatterns = patterns('wbproject.views',
+    # redirect root URL to wbinventory root URL
     url(regex=  r'^$',
         name=   'site_index',
-        view=   redirect_to,
-        kwargs= {
-            'url': '/inventory/',
-        },
+        view=   'index',
     ),
 
     # mount wbinventory app at inventory/
