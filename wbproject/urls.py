@@ -9,7 +9,7 @@ urlpatterns = patterns('wbproject.views',
         view=   'index',
     ),
 
-    # mount wbinventory app at inventory/
+    # mount wbinventory app
     url(regex=  r'^wbinventory/',
         view=   include('wbinventory.urls'),
     ),
