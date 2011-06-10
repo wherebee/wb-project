@@ -30,4 +30,5 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'wbinventory',
+    'wbproject',
 )
