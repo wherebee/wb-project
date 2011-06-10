@@ -19,7 +19,10 @@ setup(name='wb-project',
       zip_safe=False,
       install_requires=[
           'South >= 0.7.3',
-          'wb-inventory',
+          # commented out because wb-inventory won't yet have been installed
+          # if packages are being installed in parallel, as is the case with
+          # some hosting providers such as ep.io
+          ## 'wb-inventory',
       ],
       entry_points="""
       # -*- Entry points: -*-
