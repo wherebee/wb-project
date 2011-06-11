@@ -6,15 +6,15 @@ from wbproject.forms import AuthenticationForm
 urlpatterns = patterns('',
     # redirect root URL to wbinventory root URL
     url(
-        regex=  r'^$',
+        r'^$',
+        'wbproject.views.index',
         name=   'site_index',
-        view=   'wbproject.views.index',
     ),
 
     # mount wbinventory app
     url(
-        regex=  r'^wbinventory/',
-        view=   include('wbinventory.urls'),
+        r'^wbinventory/',
+        include('wbinventory.urls'),
         kwargs= dict(
             login_required=True,
         ),
@@ -22,18 +22,18 @@ urlpatterns = patterns('',
 
     # authentication
     url(
-        regex=  r'^accounts/login/$',
-        name=   'accounts_login',
-        view=   'django.contrib.auth.views.login',
-        kwargs= dict(
+        r'^accounts/login/$',
+        'django.contrib.auth.views.login',
+        name='accounts_login',
+        kwargs=dict(
             authentication_form=AuthenticationForm,
         ),
     ),
     url(
-        regex=  r'^accounts/logout/$',
-        name=   'accounts_logout',
-        view=   'django.contrib.auth.views.logout',
-        kwargs= dict(
+        r'^accounts/logout/$',
+        'django.contrib.auth.views.logout',
+        name='accounts_logout',
+        kwargs=dict(
             next_page='/',
         ),
     ),
