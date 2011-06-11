@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {# Override site_base.html in your own project's templates. #}
 {% load static %}
+{% load url from future %}
 {% get_static_prefix as STATIC_PREFIX %}
 <html>
 <head>
@@ -24,6 +25,14 @@
             {% block menu %}
                 {# <ul> with <li> elements representing site-wide menu #}
             {% endblock %}
+        </div>
+        <div id="auth">
+            {% if user.is_anonymous %}
+                <a href="{% url 'accounts_login' %}">Login</a>
+            {% else %}
+                Logged in as {{ user.username }}.
+                <a href="{% url 'accounts_logout' %}">Logout</a>.
+            {% endif %}
         </div>
         {% block header %}
             {# text in the header that might change on page-by-page basis #}
