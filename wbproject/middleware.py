@@ -17,5 +17,7 @@ class LoginRequiredMiddleware(object):
                     request.META['PATH_INFO'],
                 )
                 return HttpResponseRedirect(url)
+            else:
+                return
         else:
             return
