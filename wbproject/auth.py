@@ -27,7 +27,7 @@ class ActiveUserBackend(object):
     def has_module_perms(self, user_obj, app_label):
         if (app_label == 'wbinventory'
             and not user_obj.is_anonymous()
-            and not user_obj.is_active
+            and user_obj.is_active
         ):
             return True
         else:
