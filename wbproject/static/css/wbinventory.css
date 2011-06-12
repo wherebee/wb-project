@@ -39,8 +39,16 @@ nav #sitesearch form input[type="text"] {
 }
 
 div#content {
-    margin-left: .5em;
-    margin-right: .5em;
+    margin: 1em .5em;
+}
+
+div#content thead tr {
+    background-color: #d3d3d3;
+}
+
+div#content tbody td {
+    padding-left: .5em;
+    padding-right: .5em;
 }
 
 body > footer {
