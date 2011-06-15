@@ -51,6 +51,15 @@ div#content tbody td {
     padding-right: .5em;
 }
 
+#item-number span {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#item-name span {
+    font-size: x-large;
+}
+
 body > footer {
     border-top:  1px solid black;
     background-color: #d3d3d3;
