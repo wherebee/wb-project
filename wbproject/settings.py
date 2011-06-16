@@ -13,6 +13,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'wbproject.middleware.LoginRequiredMiddleware',
+    'django.middleware.transaction.TransactionMiddleware',
 )
 
 AUTHENTICATION_BACKENDS = (
