@@ -7,7 +7,7 @@
 <head>
     <title>{% block title %}{% endblock %}</title>
     {# libraries #}
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http{% if request.is_secure %}s{% endif %}://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     {# uni_form #}
     <link rel="stylesheet" href="{{ STATIC_PREFIX }}uni_form/uni-form.css" type="text/css" />
     <link rel="stylesheet" href="{{ STATIC_PREFIX }}uni_form/default.uni-form.css" type="text/css" />
